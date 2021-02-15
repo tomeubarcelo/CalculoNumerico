@@ -254,14 +254,25 @@ public class CalculoNumerico extends javax.swing.JFrame {
     private void btn_calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_calcularActionPerformed
         // TODO add your handling code here:
         jPanel2.setVisible(true);
+        
         String n1 = valorMin.getText();
         String n2 = valorMax.getText();
 
         int numero1 = Integer.parseInt(n1);
         int numero2 = Integer.parseInt(n2);
-
-        int resultado = numero1 + numero2;
-        salidaCalculo.setText(""+resultado);
+        StringBuffer nombre=new StringBuffer("");   
+        for (int i = 0; i < numero2; i++) {
+            int numCuadrado = i*i;
+            if ((numero1 < numCuadrado) && (numero2 > numCuadrado)) {   
+            int j = 0;           
+            nombre.insert(j,""+i+" ");   
+            j++;
+            }
+        }
+        String sCadenaInvertida=nombre.reverse().toString();
+        salidaCalculo.setText(""+sCadenaInvertida);
+        //int resultado = numero1 + numero2;
+        //salidaCalculo.setText(""+resultado);
     }//GEN-LAST:event_btn_calcularActionPerformed
 
     private void salidaCalculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salidaCalculoActionPerformed
