@@ -20,8 +20,10 @@ public class CalculoNumerico extends javax.swing.JFrame {
      */
     public CalculoNumerico() {
         initComponents();
-        jLabel2.setVisible(false);
-        jLabel3.setVisible(false);
+        label_valor_minim.setVisible(false);
+        label_valor_max.setVisible(false);
+        
+                
     }
 
     /**
@@ -35,9 +37,12 @@ public class CalculoNumerico extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        btn_comenzar = new javax.swing.JButton();
+        label_valor_minim = new javax.swing.JLabel();
+        label_valor_max = new javax.swing.JLabel();
+        btn_reset = new javax.swing.JButton();
+        btn_ayuda = new javax.swing.JButton();
+        btn_calcular = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
 
@@ -45,16 +50,32 @@ public class CalculoNumerico extends javax.swing.JFrame {
 
         jLabel1.setText("jPanel1 - Entrada de dades");
 
-        jButton1.setText("Començar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_comenzar.setText("COMENÇAR");
+        btn_comenzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_comenzarActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Introdueix el sencer mínim");
+        label_valor_minim.setText("Introdueix el sencer mínim");
 
-        jLabel3.setText("Introdueix el sencer màxim");
+        label_valor_max.setText("Introdueix el sencer màxim");
+
+        btn_reset.setText("RESET");
+        btn_reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_resetActionPerformed(evt);
+            }
+        });
+
+        btn_ayuda.setText("AJUDA");
+        btn_ayuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ayudaActionPerformed(evt);
+            }
+        });
+
+        btn_calcular.setText("CALCULAR");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -67,13 +88,19 @@ public class CalculoNumerico extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
-                        .addComponent(jButton1))
+                        .addComponent(btn_comenzar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_reset)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_ayuda)
+                        .addGap(34, 34, 34)
+                        .addComponent(btn_calcular))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(78, 78, 78)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(218, Short.MAX_VALUE))
+                            .addComponent(label_valor_minim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(label_valor_max, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,12 +108,16 @@ public class CalculoNumerico extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addComponent(label_valor_minim)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(label_valor_max)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addContainerGap())
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_comenzar)
+                    .addComponent(btn_reset)
+                    .addComponent(btn_ayuda)
+                    .addComponent(btn_calcular))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -97,7 +128,7 @@ public class CalculoNumerico extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 91, Short.MAX_VALUE)
+            .addGap(0, 111, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -108,7 +139,7 @@ public class CalculoNumerico extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 88, Short.MAX_VALUE)
+            .addGap(0, 48, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -116,8 +147,8 @@ public class CalculoNumerico extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +156,7 @@ public class CalculoNumerico extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -133,13 +164,23 @@ public class CalculoNumerico extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_comenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_comenzarActionPerformed
         // TODO add your handling code here:
 
-                jLabel2.setVisible(true);
-                jLabel3.setVisible(true);
+                label_valor_minim.setVisible(true);
+                label_valor_max.setVisible(true);
           
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_comenzarActionPerformed
+
+    private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_resetActionPerformed
+
+    private void btn_ayudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ayudaActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Operación realizada correctamente");
+        
+    }//GEN-LAST:event_btn_ayudaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,12 +218,15 @@ public class CalculoNumerico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_ayuda;
+    private javax.swing.JButton btn_calcular;
+    private javax.swing.JButton btn_comenzar;
+    private javax.swing.JButton btn_reset;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel label_valor_max;
+    private javax.swing.JLabel label_valor_minim;
     // End of variables declaration//GEN-END:variables
 }
