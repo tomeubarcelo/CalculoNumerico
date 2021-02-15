@@ -25,6 +25,8 @@ public class CalculoNumerico extends javax.swing.JFrame {
         btn_reset.setVisible(false);
         btn_ayuda.setVisible(false);    
         btn_calcular.setVisible(false);
+        
+        jPanel3.setVisible(false);
     }
 
     /**
@@ -46,6 +48,8 @@ public class CalculoNumerico extends javax.swing.JFrame {
         btn_calcular = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -132,15 +136,34 @@ public class CalculoNumerico extends javax.swing.JFrame {
             .addGap(0, 111, Short.MAX_VALUE)
         );
 
+        jLabel2.setText("jPanel3 - barra d'estat");
+
+        jTextField1.setText("jTextField1");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 8, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -173,6 +196,8 @@ public class CalculoNumerico extends javax.swing.JFrame {
         btn_reset.setVisible(true);
         btn_ayuda.setVisible(true);    
         btn_calcular.setVisible(true);
+        
+        jPanel3.setVisible(true);
     }//GEN-LAST:event_btn_comenzarActionPerformed
 
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
@@ -183,6 +208,10 @@ public class CalculoNumerico extends javax.swing.JFrame {
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "Dados dos números, un entero mínimo y otro máximo, evidentemente el máximo será mayor que el mínimo, mostrar por pantalla todos los enteros x tales que su cuadrado (x * x) se encuentre entre los valores del mínimo y del máximo.");
     }//GEN-LAST:event_btn_ayudaActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,9 +254,11 @@ public class CalculoNumerico extends javax.swing.JFrame {
     private javax.swing.JButton btn_comenzar;
     private javax.swing.JButton btn_reset;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel label_valor_max;
     private javax.swing.JLabel label_valor_minim;
     // End of variables declaration//GEN-END:variables
