@@ -22,8 +22,9 @@ public class CalculoNumerico extends javax.swing.JFrame {
         initComponents();
         label_valor_minim.setVisible(false);
         label_valor_max.setVisible(false);
-        
-                
+        btn_reset.setVisible(false);
+        btn_ayuda.setVisible(false);    
+        btn_calcular.setVisible(false);
     }
 
     /**
@@ -93,14 +94,14 @@ public class CalculoNumerico extends javax.swing.JFrame {
                         .addComponent(btn_reset)
                         .addGap(18, 18, 18)
                         .addComponent(btn_ayuda)
-                        .addGap(34, 34, 34)
+                        .addGap(18, 18, 18)
                         .addComponent(btn_calcular))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(78, 78, 78)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(label_valor_minim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(label_valor_max, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,9 +168,11 @@ public class CalculoNumerico extends javax.swing.JFrame {
     private void btn_comenzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_comenzarActionPerformed
         // TODO add your handling code here:
 
-                label_valor_minim.setVisible(true);
-                label_valor_max.setVisible(true);
-          
+        label_valor_minim.setVisible(true);
+        label_valor_max.setVisible(true);
+        btn_reset.setVisible(true);
+        btn_ayuda.setVisible(true);    
+        btn_calcular.setVisible(true);
     }//GEN-LAST:event_btn_comenzarActionPerformed
 
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
@@ -178,8 +181,7 @@ public class CalculoNumerico extends javax.swing.JFrame {
 
     private void btn_ayudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ayudaActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Operación realizada correctamente");
-        
+        JOptionPane.showMessageDialog(null, "Dados dos números, un entero mínimo y otro máximo, evidentemente el máximo será mayor que el mínimo, mostrar por pantalla todos los enteros x tales que su cuadrado (x * x) se encuentre entre los valores del mínimo y del máximo.");
     }//GEN-LAST:event_btn_ayudaActionPerformed
 
     /**
