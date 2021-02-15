@@ -260,17 +260,17 @@ public class CalculoNumerico extends javax.swing.JFrame {
 
         int numero1 = Integer.parseInt(n1);
         int numero2 = Integer.parseInt(n2);
-        StringBuffer nombre=new StringBuffer("");   
+        StringBuffer arrayNum=new StringBuffer("");   
         for (int i = 0; i < numero2; i++) {
             int numCuadrado = i*i;
             if ((numero1 < numCuadrado) && (numero2 > numCuadrado)) {   
             int j = 0;           
-            nombre.insert(j,""+i+" ");   
+            //nombre.insert(j,""+i+" ");   
+            arrayNum.append(i+" ");
             j++;
             }
         }
-        String sCadenaInvertida=nombre.reverse().toString();
-        salidaCalculo.setText(""+sCadenaInvertida);
+        salidaCalculo.setText(""+arrayNum);
         //int resultado = numero1 + numero2;
         //salidaCalculo.setText(""+resultado);
     }//GEN-LAST:event_btn_calcularActionPerformed
