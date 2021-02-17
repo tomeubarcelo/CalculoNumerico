@@ -240,6 +240,17 @@ public class CalculoNumerico extends javax.swing.JFrame {
 
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
         // TODO add your handling code here:
+        label_valor_minim.setVisible(false);
+        label_valor_max.setVisible(false);
+        btn_reset.setVisible(false);
+        btn_ayuda.setVisible(false);    
+        btn_calcular.setVisible(false);
+        jPanel3.setVisible(false);
+        valorMin.setVisible(false);
+        valorMax.setVisible(false);
+        valorMin.setText(null);
+        valorMax.setText(null);
+        jPanel2.setVisible(false);
     }//GEN-LAST:event_btn_resetActionPerformed
 
     private void btn_ayudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ayudaActionPerformed
