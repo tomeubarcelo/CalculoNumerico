@@ -5,8 +5,12 @@
  */
 package com.prog.calculonumerico;
 
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -29,6 +33,12 @@ public class CalculoNumerico extends javax.swing.JFrame {
         jPanel3.setVisible(false);
         valorMin.setVisible(false);
         valorMax.setVisible(false);
+        
+        btn_calcular.addActionListener(new BotonPulsadoListener());
+        btn_ayuda.addActionListener(new BotonPulsadoListener());
+        btn_comenzar.addActionListener(new BotonPulsadoListener());
+        btn_reset.addActionListener(new BotonPulsadoListener());
+        
     }
 
     /**
@@ -159,8 +169,8 @@ public class CalculoNumerico extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(salidaCalculo, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel3)
+                    .addComponent(salidaCalculo, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -187,10 +197,10 @@ public class CalculoNumerico extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 320, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -289,7 +299,14 @@ public class CalculoNumerico extends javax.swing.JFrame {
     private void salidaCalculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salidaCalculoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_salidaCalculoActionPerformed
-
+    
+    private class BotonPulsadoListener implements ActionListener{	
+        @Override
+        public void actionPerformed(ActionEvent e) {
+          jTextField1.setText("ÚLTIMA ACCIÓN: has pulsado el botón " + e.getActionCommand());			
+        }					
+  }
+    
     /**
      * @param args the command line arguments
      */
