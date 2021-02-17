@@ -6,11 +6,13 @@
 package com.prog.calculonumerico;
 
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -24,6 +26,9 @@ public class CalculoNumerico extends javax.swing.JFrame {
      */
     public CalculoNumerico() {
         initComponents();
+        
+        this.setTitle("Ejercicio 2 - Cálculo numérico");
+        
         label_valor_minim.setVisible(false);
         label_valor_max.setVisible(false);
         btn_reset.setVisible(false);
