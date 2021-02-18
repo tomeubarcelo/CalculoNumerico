@@ -34,7 +34,8 @@ public class CalculoNumerico extends javax.swing.JFrame {
         this.setTitle("Ejercicio 2 - Cálculo numérico");
         //Image icon = new ImageIcon(getClass().getResource("/../resources/mallorca.png")).getImage();
         //this.setIconImage(icon);   
-        this.setIconImage(new javax.swing.ImageIcon("C:\\Users\\tomeu\\Downloads\\boton-de-play.png").getImage());
+        //this.setIconImage(new javax.swing.ImageIcon("mallorca.png").getImage());
+        this.setIconImage(new javax.swing.ImageIcon("C:\\Users\\tomeu\\Downloads\\app.png").getImage());
         label_valor_minim.setVisible(false);
         label_valor_max.setVisible(false);
         btn_reset.setVisible(false);
