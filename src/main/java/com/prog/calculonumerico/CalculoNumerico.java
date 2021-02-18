@@ -28,7 +28,8 @@ public class CalculoNumerico extends javax.swing.JFrame {
         initComponents();
         
         this.setTitle("Ejercicio 2 - Cálculo numérico");
-        
+        //Image icon = new ImageIcon(getClass().getResource("/../resources/mallorca.png")).getImage();
+        //this.setIconImage(icon);
         label_valor_minim.setVisible(false);
         label_valor_max.setVisible(false);
         btn_reset.setVisible(false);
