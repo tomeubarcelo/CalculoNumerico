@@ -6,21 +6,13 @@
 package com.prog.calculonumerico;
 
 import java.awt.Image;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-import javax.swing.JSeparator;
 
 /**
- *
+ * Ejercicio 2. Cálculo numérico
  * @author tomeu
  */
 public class CalculoNumerico extends javax.swing.JFrame {
@@ -32,10 +24,10 @@ public class CalculoNumerico extends javax.swing.JFrame {
         initComponents();
         
         this.setTitle("Ejercicio 2 - Cálculo numérico");
-        //Image icon = new ImageIcon(getClass().getResource("/../resources/mallorca.png")).getImage();
+        //Image icon = new ImageIcon(getClass().getResource("resources/app.png")).getImage();
         //this.setIconImage(icon);   
-        //this.setIconImage(new javax.swing.ImageIcon("mallorca.png").getImage());
-        this.setIconImage(new javax.swing.ImageIcon("C:\\Users\\tomeu\\Downloads\\app.png").getImage());
+        //this.setIconImage(new javax.swing.ImageIcon("resources/app.png").getImage());
+        this.setIconImage(new javax.swing.ImageIcon("C:/Users/tomeu/Downloads/app.png").getImage());
         label_valor_minim.setVisible(false);
         label_valor_max.setVisible(false);
         btn_reset.setVisible(false);
