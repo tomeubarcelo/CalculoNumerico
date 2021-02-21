@@ -24,10 +24,9 @@ public class CalculoNumerico extends javax.swing.JFrame {
         initComponents();
         
         this.setTitle("Ejercicio 2 - Cálculo numérico");
-        //Image icon = new ImageIcon(getClass().getResource("resources/app.png")).getImage();
-        //this.setIconImage(icon);   
+
         this.setIconImage(new javax.swing.ImageIcon("src/main/resources/img/app.png").getImage());
-        //this.setIconImage(new javax.swing.ImageIcon("C:/Users/tomeu/Downloads/app.png").getImage());
+
         label_valor_minim.setVisible(false);
         label_valor_max.setVisible(false);
         btn_reset.setVisible(false);
@@ -235,7 +234,7 @@ public class CalculoNumerico extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem2.setIcon(new javax.swing.ImageIcon("C:\\Users\\tomeu\\Downloads\\settings.png")); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/settings.png"))); // NOI18N
         jMenuItem2.setText("Reset");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,7 +244,7 @@ public class CalculoNumerico extends javax.swing.JFrame {
         jMenu1.add(jMenuItem2);
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
-        jMenuItem3.setIcon(new javax.swing.ImageIcon("C:\\Users\\tomeu\\Downloads\\informacion.png")); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/informacion.png"))); // NOI18N
         jMenuItem3.setText("Ajuda");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,7 +254,7 @@ public class CalculoNumerico extends javax.swing.JFrame {
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem4.setIcon(new javax.swing.ImageIcon("C:\\Users\\tomeu\\Downloads\\calculadora.png")); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/calculadora.png"))); // NOI18N
         jMenuItem4.setText("Calcular");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

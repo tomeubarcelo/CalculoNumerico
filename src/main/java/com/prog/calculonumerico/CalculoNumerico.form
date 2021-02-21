@@ -29,7 +29,7 @@
                   <KeyStroke key="Ctrl+Z"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\tomeu\Downloads\settings.png"/>
+                  <Image iconType="3" name="/img/settings.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Reset"/>
               </Properties>
@@ -43,7 +43,7 @@
                   <KeyStroke key="F1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\tomeu\Downloads\informacion.png"/>
+                  <Image iconType="3" name="/img/informacion.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ajuda"/>
               </Properties>
@@ -57,7 +57,7 @@
                   <KeyStroke key="Ctrl+S"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\tomeu\Downloads\calculadora.png"/>
+                  <Image iconType="3" name="/img/calculadora.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Calcular"/>
               </Properties>
