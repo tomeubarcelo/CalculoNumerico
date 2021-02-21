@@ -15,7 +15,7 @@
                   <KeyStroke key="Ctrl+A"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\tomeu\Downloads\boton-de-play.png"/>
+                  <Image iconType="3" name="/img/boton-de-play.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Comen&#xe7;ar"/>
               </Properties>

@@ -26,8 +26,8 @@ public class CalculoNumerico extends javax.swing.JFrame {
         this.setTitle("Ejercicio 2 - Cálculo numérico");
         //Image icon = new ImageIcon(getClass().getResource("resources/app.png")).getImage();
         //this.setIconImage(icon);   
-        //this.setIconImage(new javax.swing.ImageIcon("resources/app.png").getImage());
-        this.setIconImage(new javax.swing.ImageIcon("C:/Users/tomeu/Downloads/app.png").getImage());
+        this.setIconImage(new javax.swing.ImageIcon("src/main/resources/img/app.png").getImage());
+        //this.setIconImage(new javax.swing.ImageIcon("C:/Users/tomeu/Downloads/app.png").getImage());
         label_valor_minim.setVisible(false);
         label_valor_max.setVisible(false);
         btn_reset.setVisible(false);
@@ -225,7 +225,7 @@ public class CalculoNumerico extends javax.swing.JFrame {
         jMenu1.setText("Arxiu");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\tomeu\\Downloads\\boton-de-play.png")); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton-de-play.png"))); // NOI18N
         jMenuItem1.setText("Començar");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
